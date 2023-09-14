@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { Box, Button, InputLabel, TextField, Typography } from "@mui/material";
+import { Button, InputLabel, TextField } from "@mui/material";
 import { toast } from "react-toastify"
 
 
@@ -24,7 +24,7 @@ const CreateBlog = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const { data } = await axios.post("/api/v1/blog/post-blog", {
+            const { data } = await axios.post("https://blog-app-apis-607h.onrender.com/api/v1/blog/post-blog", {
                 title: inputs.title,
                 description: inputs.description,
                 image: inputs.image,

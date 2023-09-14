@@ -12,7 +12,7 @@ const UserBlogs = () => {
         try {
 
             const id = localStorage.getItem("userId");
-            const { data } = await axios.get(`/api/v1/blog/user-blog/${id}`);
+            const { data } = await axios.get(`https://blog-app-apis-607h.onrender.com/api/v1/blog/user-blog/${id}`);
 
             if (data && data.success) {
                 setBlogs(data.userBlog.blogs);

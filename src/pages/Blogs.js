@@ -13,7 +13,7 @@ const Blogs = () => {
 
     try {
 
-      const { data } = await axios.get('/api/v1/blog/all-blogs');
+      const { data } = await axios.get(`https://blog-app-apis-607h.onrender.com/api/v1/blog/all-blogs`);
 
       if (data && data.success) {
         setBlogs(data.blogData);

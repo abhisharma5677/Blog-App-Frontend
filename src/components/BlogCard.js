@@ -31,7 +31,7 @@ export default function BlogCard(props) {
 
         try {
 
-            const result = await axios.delete(`api/v1/blog/delete-blog/${props.blogId}`)
+            const result = await axios.delete(`https://blog-app-apis-607h.onrender.com/api/v1/blog/delete-blog/${props.blogId}`)
 
             if (result.data.success) {
 

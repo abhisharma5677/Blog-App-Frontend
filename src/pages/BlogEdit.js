@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { useNavigate, useParams } from "react-router-dom";
-import { Box, Button, InputLabel, TextField, Typography } from "@mui/material";
+import { Button, InputLabel, TextField } from "@mui/material";
 
 
 const BlogEdit = () => {
@@ -18,7 +18,7 @@ const BlogEdit = () => {
     // get blog details
     const getBlogDetail = async () => {
         try {
-            const { data } = await axios.get(`/api/v1/blog/get-blog/${id}`);
+            const { data } = await axios.get(`https://blog-app-apis-607h.onrender.com/api/v1/blog/get-blog/${id}`);
             if (data?.success) {
                 setBlog(data?.requiredBlog);
 
@@ -53,7 +53,7 @@ const BlogEdit = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const { data } = await axios.put(`/api/v1/blog/update-blog/${id}`, {
+            const { data } = await axios.put(`https://blog-app-apis-607h.onrender.com/api/v1/blog/update-blog/${id}`, {
                 title: inputs.title,
                 description: inputs.description,
                 image: inputs.image,

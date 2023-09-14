@@ -41,7 +41,7 @@ const Login = () => {
 
     try {
 
-      const result = await axios.post('api/v1/user/login', { email: loginContent.email, password: loginContent.password });
+      const result = await axios.post(`https://blog-app-apis-607h.onrender.com/api/v1/user/login`, { email: loginContent.email, password: loginContent.password });
 
       //if 'true' success message
       if (result.data.success) {

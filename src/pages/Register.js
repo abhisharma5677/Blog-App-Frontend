@@ -32,7 +32,7 @@ const Register = () => {
     //console.log(data);
 
     try {
-      const result = await axios.post('/api/v1/user/register', { username: data.username, email: data.email, password: data.password });
+      const result = await axios.post(`https://blog-app-apis-607h.onrender.com/api/v1/user/register`, { username: data.username, email: data.email, password: data.password });
 
       if (result.data.success) {
         toast.success("User Registered Successfully...", {
